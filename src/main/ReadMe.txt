@@ -1,0 +1,5 @@
+@ComponentScan注解:
+basePackages定义扫描的包名，在未定义的情况下，只会扫描当前包和其子包下的路径
+basePackageClasses定义扫描的类
+includeFilters定义满足过滤器条件的Bean才去扫描
+excludeFilters定义排除过滤器条件的Bean才去扫描
