@@ -1,7 +1,10 @@
 package com.wkang.springboot.demo.config;
 
 
+import com.wkang.springboot.demo.definition.Person;
+import com.wkang.springboot.demo.pojo.BusinessPerson;
 import com.wkang.springboot.demo.pojo.User;
+import javafx.util.converter.PercentageStringConverter;
 import org.apache.log4j.Logger;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -16,8 +19,8 @@ public class IoCTest {
 
     public static void main(String[] args) {
         ApplicationContext ctx = new AnnotationConfigApplicationContext(AppConfig.class);
-        User user = ctx.getBean(User.class);
-        log.info(user.getName());
+        Person person = ctx.getBean(BusinessPerson.class);
+        person.service();
     }
 
 }
